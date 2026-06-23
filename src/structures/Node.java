@@ -5,8 +5,8 @@ package structures;
 public class Node<T> {
 
     private T value;
-    private Node<T> left;
-    private Node<T> right;
+    public Node<T> left;
+    public Node<T> right;
 
     // Constructor ES LO QUE CREA EL NODO
     // NECESTIO SOLO EL VALOR, LAS REFERENCIAS SE INICIALIZAN EN NULL
