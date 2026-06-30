@@ -1,9 +1,57 @@
+import java.util.Map;
+import java.util.Set;
+
+import collections.sets.Sets;
+import collections.sets.maps.Maps;
+import models.Contacto;
 import structures_trees.IntTree;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        runIntTree();
+        //runIntTree();
+        //runSets();
+        runMaps();
     }
+
+    private static void runMaps() {
+        Maps maps = new Maps();
+        Map<String, Integer> hashMap = maps.construirHashMap();
+        maps.construirHashMap();
+    }
+
+    private static void runSets() {
+        Sets sets = new Sets();
+
+        System.out.println("HashSet: " + sets.construirHashSet());
+        Set<String> hashSet = sets.construirHashSet();
+        System.out.println(hashSet);
+        System.out.println("Tamaño: " + hashSet.size());
+        System.out.println(hashSet.contains("F"));
+
+        System.out.println("LinkedHashSet: " + sets.construirLinkedHashSet());
+        Set<String> lhSet = sets.construirLinkedHashSet();
+        System.out.println(lhSet);
+        System.out.println("Tamaño: " + lhSet.size());
+        System.out.println(lhSet.contains("A"));
+
+        System.out.println("TreeSet: " + sets.construirTreeSet());
+        Set<String> treeSet = sets.construirTreeSet();
+        System.out.println(treeSet);
+        System.out.println("Tamaño: " + treeSet.size());
+        System.out.println(treeSet.contains("A"));
+
+        System.out.println("TreeSet con comparador: " + sets.construirTreeSetConComparador());
+        Set<Contacto> treeSetConComparador = sets.construirTreeSetConComparador();
+        System.out.println(treeSetConComparador);
+        System.out.println("Tamaño: " + treeSetConComparador.size());
+
+        System.out.println("HashSet con Contactos: " + sets.construirHashSetContacto());
+        Set<Contacto> hashSetConContacto = sets.construirHashSetContacto();
+        System.out.println(hashSetConContacto);
+        System.out.println("Tamaño: " + hashSetConContacto.size());
+    }
+
+
 
     private static void runIntTree() {
         IntTree arbolNumeros = new IntTree(); /// CLASE ARBOL
@@ -37,4 +85,3 @@ public class App {
     }
 }
 
-    

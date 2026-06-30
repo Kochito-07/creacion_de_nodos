@@ -49,8 +49,7 @@ public class IntTree {
     }
 
     public Node<Integer> getRoot() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getRoot'");
+        return root;    
     }
 
 }
