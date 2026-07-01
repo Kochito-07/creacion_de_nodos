@@ -1,16 +1,20 @@
 import java.util.Map;
 import java.util.Set;
 
+import Ejercicio_01_insert.Node;
 import collections.sets.Sets;
 import collections.sets.maps.Maps;
 import models.Contacto;
+import structures.graphs.Graph;
 import structures_trees.IntTree;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
-        //runIntTree();
+        runIntTree();
         //runSets();
-        runMaps();
+        //runMaps();
+        runGraph();
     }
 
     private static void runMaps() {
@@ -82,6 +86,24 @@ public class App {
         arbolNumeros.preOrder();
         System.out.println("Pos Order");
         arbolNumeros.posOrder();
+    }
+    private static void runGraph() {
+        Graph<String> graph = new Graph<>();
+        graph.add("A");
+        graph.add("B");
+        graph.add("C");
+        graph.add("D");
+        graph.add("J");
+        graph.addEdge("A", "B");
+        graph.addEdge("B", "C");
+        graph.addEdge("C", "A");
+        graph.addEdge("D", "C");
+        graph.addEdge("J", "D");
+        graph.addEdge("D", "J");
+        graph.addEdge("C", "D");
+
+        System.out.println("Graph:");
+        graph.printGraph();
     }
 }
 
